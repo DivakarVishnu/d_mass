@@ -1,68 +1,104 @@
-<!DOCTYPE html>
-<html lang="ta">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Colour Prediction Tamil</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <div class="container">
-      <img src="dmass.jpg" alt="App Logo" class="logo" />
-      <h1>Colour Prediction Website</h1>
-      <p>📱 Daily Income | 🎯 No Age Limit | 💰 Students, Workers, All Welcome!</p>
-      <div class="cta-links">
-        <a href="https://t.me/+tWAp0hMn0xE5Y2Zl" class="btn" target="_blank">📲 Join Telegram</a>
-        <a href="http://www.youtube.com/@dmasszone" class="btn youtube" target="_blank">📺 Visit YouTube</a>
-      </div>
-    </div>
-  </header>
-
-  <section class="about">
-    <div class="container">
-      <h2>Why Choose Us?</h2>
-      <ul>
-        <li>✅ No Age Limit – Everyone Can Join</li>
-        <li>🎓 Students – Earn Pocket Money</li>
-        <li>👨‍💼 Working Professionals – Side Income</li>
-        <li>🏡 Homemakers – Flexible Timings</li>
-        <li>💬 Real Support via Telegram</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="how-it-works">
-    <div class="container">
-      <h2>How It Works?</h2>
-      <p>Predict the correct colour: 🔴 Red | 🟢 Green | 🟣 Violet – and earn money instantly.</p>
-      <p><strong>Free predictions are shared ONLY in our Telegram group!</strong></p>
-    </div>
-  </section>
-
-  <section class="testimonials">
-    <div class="container">
-      <h2>User Feedback</h2>
-      <blockquote>“I earned ₹500 in 2 days. Best platform!” – Raj</blockquote>
-      <blockquote>“Best for students. Daily prediction super accurate!” – Kavya</blockquote>
-    </div>
-  </section>
-
-  <section class="contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>For help and support, join our Telegram group or visit our YouTube channel for video guides.</p>
-      <div class="cta-links">
-        <a href="https://t.me/+tWAp0hMn0xE5Y2Zl" class="btn" target="_blank">💬 Join Telegram</a>
-        <a href="http://www.youtube.com/@dmasszone" class="btn youtube" target="_blank">📺 Visit YouTube</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Colour Prediction Tamil. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title> Registration</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif; 
+        } 
+        .form-container { 
+            width: 350px; 
+            margin: auto; 
+            padding: 20px; 
+            border: 1px solid #ddd; 
+            border-radius: 10px; 
+            margin-top: 50px; 
+        } 
+        .form-container h2 { 
+            text-align: center; 
+            color: #4267B2; 
+        } 
+        label { 
+            display: block; 
+            margin-top: 10px; 
+        } 
+        input { 
+            width: 100%; 
+            padding: 8px; 
+        } 
+        button { 
+            margin-top: 15px; 
+            width: 100%; 
+            padding: 10px; 
+            background-color: #4267B2; 
+            color: white; 
+            border: none; 
+            cursor: pointer; 
+        } 
+        button:hover { 
+            background-color: #365899; 
+        } 
+    </style> 
+    
+</head> 
+<body> 
+ 
+<div class="form-container"> 
+    <h2>VIP Registration</h2> 
+    <form name="fbForm" onsubmit="return validateForm()" action="index.html" target="_blank"> 
+        <label>First Name:</label> 
+        <input type="text" name="fname"> 
+ 
+        <label>Last Name:</label> 
+        <input type="text" name="lname"> 
+ 
+        <label>Email:</label> 
+        <input type="email" name="email"> 
+ 
+        <label>Password:</label> 
+        <input type="password" name="password"> 
+ 
+        <label>Date of Birth:</label> 
+        <input type="date" name="dob"> 
+ 
+        <label>Gender:</label> 
+        <input type="radio" name="gender" value="Male"> Male 
+        <input type="radio" name="gender" value="Female"> Female 
+ 
+        <button type="submit">Register</button> 
+    </form> 
+</div> 
+ 
+<script> 
+function validateForm() { 
+    var fname = document.fbForm.fname.value; 
+    var lname = document.fbForm.lname.value; 
+    var email = document.fbForm.email.value; 
+    var password = document.fbForm.password.value; 
+    var dob = document.fbForm.dob.value; 
+    var gender = document.fbForm.gender.value; 
+ 
+    if (fname == "" || lname == "" || email == "" || password == "" || dob == "") { 
+        alert("All fields must be filled out."); 
+        return false; 
+    } 
+    if (password.length < 6) { 
+        alert("Password must be at least 6 characters long."); 
+        return false; 
+    } 
+    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/; 
+    if (!email.match(emailPattern)) { 
+        alert("Please enter a valid email address."); 
+        return false; 
+    } 
+    if (!document.fbForm.gender.value) { 
+        alert("Please select your gender."); 
+        return false; 
+    } 
+    
+    return true; 
+} 
+</script> 
+ 
+</body> 
+</html> 
